@@ -1,0 +1,7 @@
+body,html{height:100%;}
+.popup-layer{width:100%;height:100%;background:#000;filter:alpha(opacity=80);background:rgba(0,0,0,.75);position:fixed;left:0;top:0;display:none;}
+.popup-poper{position:fixed;left:50%;top:50%;display:none;opacity:0;filter:alpha(opacity=0);}
+.popup-poper.zoomIn{animation:zoomIn .5s;-webkit-animation:zoomIn .5s;-moz-animation:zoomIn .5s;-ms-animation:zoomIn .5s;}
+.popup-poper.fadeIn{animation:fadeIn .5s;-webkit-animation:fadeIn .5s;-moz-animation:fadeIn .5s;-ms-animation:fadeIn .5s;}
+.popup-poper.fromTop{animation:fromTop .5s;-webkit-animation:fromTop .5s;-moz-animation:fromTop .5s;-ms-animation:fromTop .5s;}
+.popup-poper.fromBottom{animation:fromBottom .5s;-webkit-animation:fromBottom .5s;-moz-animation:fromBottom .5s;-ms-animation:fromBottom .5s;}

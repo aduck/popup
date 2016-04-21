@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<style>
+*{margin:0;padding:0;}
+.box{padding:20px;background:#fff;}
+</style>
+</head>
+<body>
+<button id="btn">test</button>
+
+<script type="text/tpl" id="pop01">
+	<div class="box">
+		<div class="image">image</div>	
+		<div class="text">text</div>	
+		<button onclick='poper2.open()'>点开2层</button>
+		<button onclick='Ipop.closeAll()'>全部关闭</button>
+	</div>
+</script>	
+<script type="text/tpl" id="pop02">
+	<div class="box">
+		<div class="image">image2</div>	
+		<div class="text">text2</div>
+		<button onclick='poper.close()'>关闭1层</button>	
+		<button onclick='poper.open()'>打开1层</button>	
+	</div>
+</script>	
+<script src="popup.js"></script>
+<script src="pop.js"></script>
+<script>
+var btn=document.getElementById('btn');
+window.poper=new Ipop({
+	content:document.getElementById('pop01').innerHTML,
+	effect:'fromTop',
+	position:'bottom'
+})
+window.poper2=new Ipop({content:document.getElementById('pop02').innerHTML})
+btn.onclick=function(){
+	poper.open();
+}
+
+
+</script>
+</body>
+</html>
